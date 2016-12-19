@@ -7124,6 +7124,16 @@ in {
 
   rxv     = callPackage ../development/python-modules/rxv     { };
 
+  nss = callPackage ../development/python-modules/nss {
+    inherit (pkgs) nss nspr;
+  };
+
+  pki-core = callPackage ../development/python-modules/pki-core { };
+
+  lesscpy = callPackage ../development/python-modules/lesscpy { };
+
+  yubico = callPackage ../development/python-modules/yubico { };
+
 });
 
 in fix' (extends overrides packages)
